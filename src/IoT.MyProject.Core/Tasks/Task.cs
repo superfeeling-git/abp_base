@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace IoT.MyProject.Tasks
 {
     [Table("AppTasks")]
-    public class Task : Entity, IHasCreationTime, ISoftDelete
+    public class Task : Entity, IHasCreationTime
     {
         public const int MaxTitleLength = 256;
         public const int MaxDescriptionLength = 64 * 1024; //64KB
