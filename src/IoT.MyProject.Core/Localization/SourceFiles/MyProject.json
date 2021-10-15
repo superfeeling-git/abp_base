@@ -1,0 +1,11 @@
+﻿{
+  "culture": "en",
+  "texts": {
+    "HelloWorld": "HI，你好！",
+    "ChangeLanguage": "更改语言",
+    "HomePage": "主页",
+    "About": "关于",
+    "Home_Description": "欢迎...",
+    "About_Description": "这是一个基于ABP框架的应用程序示例页面"
+  }
+}
