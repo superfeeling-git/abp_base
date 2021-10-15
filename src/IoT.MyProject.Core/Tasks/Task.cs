@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace IoT.MyProject.Tasks
 {
     [Table("AppTasks")]
-    public class Task : Entity, IHasCreationTime
+    public class Task : Entity, IHasCreationTime, ISoftDelete
     {
         public const int MaxTitleLength = 256;
         public const int MaxDescriptionLength = 64 * 1024; //64KB
@@ -28,9 +28,10 @@ namespace IoT.MyProject.Tasks
 
         public TaskState State { get; set; }
 
+        public bool IsDeleted { get; set; }
+
         public Task()
         {
-            CreationTime = Clock.Now;
             State = TaskState.Open;
         }
 

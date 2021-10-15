@@ -29,6 +29,7 @@ namespace IoT.MyProject.Web.Startup
 
             Configuration.Navigation.Providers.Add<MyProjectNavigationProvider>();
 
+            //动态WEBAPI
             Configuration.Modules.AbpAspNetCore()
                 .CreateControllersForAppServices(
                     typeof(MyProjectApplicationModule).GetAssembly()

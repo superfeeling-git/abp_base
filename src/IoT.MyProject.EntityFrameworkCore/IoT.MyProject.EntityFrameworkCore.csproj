@@ -20,6 +20,13 @@
     <None Remove="Migrations\**" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\20211015054639_initialCreate.cs" />
+    <Compile Include="Migrations\20211015054639_initialCreate.Designer.cs" />
+    <Compile Include="Migrations\20211015073545_1015.cs" />
+    <Compile Include="Migrations\20211015073545_1015.Designer.cs" />
+    <Compile Include="Migrations\MyProjectDbContextModelSnapshot.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\IoT.MyProject.Core\IoT.MyProject.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
