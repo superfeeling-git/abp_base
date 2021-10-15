@@ -14,7 +14,9 @@
     <ProjectReference Include="..\IoT.MyProject.Core\IoT.MyProject.Core.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Abp" Version="6.5.0" />
     <PackageReference Include="Abp.EntityFrameworkCore" Version="6.5.0" />
     <PackageReference Include="Abp.AutoMapper" Version="6.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
   </ItemGroup>
 </Project>

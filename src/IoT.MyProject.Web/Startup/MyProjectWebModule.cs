@@ -1,5 +1,7 @@
-﻿using Abp.AspNetCore;
+﻿using Abp.Application.Services;
+using Abp.AspNetCore;
 using Abp.AspNetCore.Configuration;
+using Abp.Configuration.Startup;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using IoT.MyProject.Configuration;
@@ -7,6 +9,7 @@ using IoT.MyProject.EntityFrameworkCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.Configuration;
+using System.Reflection;
 
 namespace IoT.MyProject.Web.Startup
 {
@@ -29,10 +32,10 @@ namespace IoT.MyProject.Web.Startup
 
             Configuration.Navigation.Providers.Add<MyProjectNavigationProvider>();
 
-            Configuration.Modules.AbpAspNetCore()
-                .CreateControllersForAppServices(
-                    typeof(MyProjectApplicationModule).GetAssembly()
-                );
+            Configuration.Modules.AbpAspNetCore().CreateControllersForAppServices(
+                typeof(MyProjectApplicationModule).Assembly, 
+                moduleName: "app", 
+                useConventionalHttpVerbs: true);
         }
 
         public override void Initialize()
